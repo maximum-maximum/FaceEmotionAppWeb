@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Lena from "../lena.jpg";
 
-function Detection() {
+const Detection: React.FC = () => {
   const [images, setImages] = useState([]);
   const fileInput = () => {};
 
@@ -45,6 +45,6 @@ function Detection() {
       </div>
     </div>
   );
-}
+};
 
 export default Detection;

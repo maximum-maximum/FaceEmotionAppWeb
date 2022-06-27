@@ -1,4 +1,4 @@
-function Prediction() {
+const Prediction: React.FC = () => {
   return (
     <div>
       <h3>Emotion Prediction</h3>
@@ -47,6 +47,6 @@ function Prediction() {
       </div>
     </div>
   );
-}
+};
 
 export default Prediction;

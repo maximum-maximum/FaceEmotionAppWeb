@@ -1,6 +1,6 @@
 import { ReactComponent as Github } from "../github.svg";
 
-function Header() {
+const Header: React.FC = () => {
   return (
     <header>
       <h1>Face Emotion App</h1>
@@ -13,6 +13,6 @@ function Header() {
       </a>
     </header>
   );
-}
+};
 
 export default Header;
