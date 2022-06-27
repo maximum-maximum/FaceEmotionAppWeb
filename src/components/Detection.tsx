@@ -2,8 +2,19 @@ import React, { useState } from "react";
 import Lena from "../lena.jpg";
 
 const Detection: React.FC = () => {
-  const [images, setImages] = useState([]);
-  const fileInput = () => {};
+  const [img, setImg] = useState<string>(Lena);
+  const fileInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files === null) return;
+
+    const file = e.target.files.item(0);
+    if (file === null) return;
+
+    let reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => {
+      setImg(reader.result as string);
+    };
+  };
 
   return (
     <div className="face-detection">
@@ -11,7 +22,7 @@ const Detection: React.FC = () => {
       <div className="upper-content">
         <div className="source">
           <a id="source">Source</a>
-          <img id="src-image" src={Lena} alt="lena" />
+          <img id="src-image" src={img} alt="lena" />
           <input
             type="file"
             id="input-file"
