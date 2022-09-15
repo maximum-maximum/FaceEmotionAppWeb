@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  app:
+    container_name: face-emotion-app
+    image: face-emotion-app
+    build:
+      context: .
+      target: development
+    volumes:
+      - ./src:/app/src
+    ports:
+      - 3333:3333
