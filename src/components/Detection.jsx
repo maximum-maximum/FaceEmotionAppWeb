@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Lena from "../lena.jpg";
 
 const Detection = () => {
-  const [img, setImg] = useState < string > Lena;
+  const [img, setImg] = useState(Lena);
   const fileInput = (e) => {
     if (e.target.files === null) return;
 
