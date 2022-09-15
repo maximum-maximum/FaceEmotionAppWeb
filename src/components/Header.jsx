@@ -1,6 +1,6 @@
 import { ReactComponent as Github } from "../github.svg";
 
-const Header: React.FC = () => {
+const Header = () => {
   return (
     <header>
       <h1>Face Emotion App</h1>

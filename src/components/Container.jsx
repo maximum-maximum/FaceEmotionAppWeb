@@ -1,7 +1,7 @@
 import Detection from "./Detection";
 import Prediction from "./Prediction";
 
-const Container: React.FC = () => {
+const Container = () => {
   return (
     <div className="container">
       <Detection />

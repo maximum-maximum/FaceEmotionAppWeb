@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import Lena from "../lena.jpg";
 
-const Detection: React.FC = () => {
-  const [img, setImg] = useState<string>(Lena);
-  const fileInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+const Detection = () => {
+  const [img, setImg] = useState < string > Lena;
+  const fileInput = (e) => {
     if (e.target.files === null) return;
 
     const file = e.target.files.item(0);
@@ -12,7 +12,7 @@ const Detection: React.FC = () => {
     let reader = new FileReader();
     reader.readAsDataURL(file);
     reader.onload = () => {
-      setImg(reader.result as string);
+      setImg(reader.result);
     };
   };
 

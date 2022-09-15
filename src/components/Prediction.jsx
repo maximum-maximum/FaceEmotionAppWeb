@@ -1,4 +1,4 @@
-const Prediction: React.FC = () => {
+const Prediction = () => {
   return (
     <div>
       <h3>Emotion Prediction</h3>
