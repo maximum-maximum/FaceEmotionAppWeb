@@ -1,19 +1,18 @@
 import React, { useState } from "react";
 import Lena from "../lena.jpg";
 
-const Detection = () => {
-  const [img, setImg] = useState(Lena);
+const Detection = (props) => {
+  const { img, setImg } = props;
+
   const fileInput = (e) => {
     if (e.target.files === null) return;
 
     const file = e.target.files.item(0);
     if (file === null) return;
 
-    let reader = new FileReader();
+    const reader = new FileReader();
     reader.readAsDataURL(file);
-    reader.onload = () => {
-      setImg(reader.result);
-    };
+    reader.onload = () => setImg(reader.result);
   };
 
   return (
@@ -50,7 +49,7 @@ const Detection = () => {
             type="button"
             className="button"
             value="リセット"
-            onClick={() => window.location.reload()}
+            onClick={() => setImg(Lena)}
           />
         </div>
       </div>
